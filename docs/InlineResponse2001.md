@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**message** | **String** |  | [optional] 
+**message** | **String** | Mensaje de respuesta | [optional] 
 **data** | [**InlineResponse2001Data**](InlineResponse2001Data.md) |  | [optional] 
 
 

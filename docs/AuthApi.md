@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 Autentificación con usuario y clave.
 
-Retorna un token con el que se deben realizar las llamadas al resto de los endpoints del API. Sin este token no se pueden acceder a los endpoints. &lt;br&gt; Se deben ingresar \&quot;user\&quot; y \&quot;password\&quot; válidos, creados a través del dashborad de Pago Fácil &lt;br&gt; No requiere configuración de autorización &lt;br&gt; Endpoints &lt;br&gt; - Producción https://apis.pgf.cl &lt;br&gt; - Desarrollo https://apis-dev.pgf.cl
+Retorna un token con el que se deben realizar las llamadas al resto de los endpoints del API. Sin este token no se pueden acceder a los endpoints. &lt;br&gt; Se deben ingresar \&quot;user\&quot; y \&quot;password\&quot; válidos, creados a través del dashborad de Pago Fácil &lt;br&gt; No requiere configuración de autorización &lt;br&gt; Endpoints &lt;br&gt; - Producción https://apis.pgf.cl - Desarrollo https://apis-dev.pgf.cl
 
 ### Example
 

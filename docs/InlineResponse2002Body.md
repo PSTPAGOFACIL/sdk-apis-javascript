@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**message** | **String** |  | [optional] 
+**message** | **String** | Mensaje de respuesta | [optional] 
 **data** | [**InlineResponse2002BodyData**](InlineResponse2002BodyData.md) |  | [optional] 
 
 

@@ -1,8 +1,8 @@
 {
   "name": "@pagofacil/api_pago_facil",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "description": "API_de_Pago_Fcil",
-  "license": "Unlicense",
+  "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src -d dist",
@@ -42,5 +42,23 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PSTPAGOFACIL/sdk-apis-javascript.git"
+  },
+  "keywords": [
+    "pagofacil",
+    "api",
+    "sdk"
+  ],
+  "author": "Cristian Tala Sánchez",
+  "bugs": {
+    "url": "https://github.com/PSTPAGOFACIL/sdk-apis-javascript/issues"
+  },
+  "homepage": "https://github.com/PSTPAGOFACIL/sdk-apis-javascript#readme"
 }
