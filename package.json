@@ -1,6 +1,6 @@
 {
   "name": "@pagofacil/api_pago_facil",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "API_de_Pago_Fcil",
   "license": "Unlicense",
   "main": "dist/index.js",
