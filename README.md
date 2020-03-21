@@ -19,7 +19,7 @@ To publish the library as a [npm](https://www.npmjs.com/), please follow the pro
 Then install it via:
 
 ```shell
-npm install api_pago_facil --save
+npm install @pagofacil/api_pago_facil --save
 ```
 
 Finally, you need to build the module:

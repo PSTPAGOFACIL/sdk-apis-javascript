@@ -13,10 +13,10 @@
 
 
 import ApiClient from "../ApiClient";
-import InlineObject from '../model/InlineObject';
 import InlineResponse400 from '../model/InlineResponse400';
 import InlineResponse401 from '../model/InlineResponse401';
 import InlineResponse500 from '../model/InlineResponse500';
+import LoginBody from '../model/LoginBody';
 import LoginResponse from '../model/LoginResponse';
 
 /**
@@ -50,13 +50,13 @@ export default class AuthApi {
      * Autentificación con usuario y clave.
      * Retorna un token con el que se deben realizar las llamadas al resto de los endpoints del API. Sin este token no se pueden acceder a los endpoints. <br> Se deben ingresar \"user\" y \"password\" válidos, creados a través del dashborad de Pago Fácil <br> No requiere configuración de autorización <br> Endpoints <br> - Producción https://apis.pgf.cl <br> - Desarrollo https://apis-dev.pgf.cl
      * @param {Object} opts Optional parameters
-     * @param {module:model/InlineObject} opts.inlineObject 
+     * @param {module:model/LoginBody} opts.loginBody 
      * @param {module:api/AuthApi~usersLoginPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/LoginResponse}
      */
     usersLoginPost(opts, callback) {
       opts = opts || {};
-      let postBody = opts['inlineObject'];
+      let postBody = opts['loginBody'];
 
       let pathParams = {
       };

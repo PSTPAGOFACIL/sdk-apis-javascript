@@ -7,13 +7,13 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _InlineObject = _interopRequireDefault(require("../model/InlineObject"));
-
 var _InlineResponse = _interopRequireDefault(require("../model/InlineResponse400"));
 
 var _InlineResponse2 = _interopRequireDefault(require("../model/InlineResponse401"));
 
 var _InlineResponse3 = _interopRequireDefault(require("../model/InlineResponse500"));
+
+var _LoginBody = _interopRequireDefault(require("../model/LoginBody"));
 
 var _LoginResponse = _interopRequireDefault(require("../model/LoginResponse"));
 
@@ -55,7 +55,7 @@ var AuthApi = /*#__PURE__*/function () {
    * Autentificación con usuario y clave.
    * Retorna un token con el que se deben realizar las llamadas al resto de los endpoints del API. Sin este token no se pueden acceder a los endpoints. <br> Se deben ingresar \"user\" y \"password\" válidos, creados a través del dashborad de Pago Fácil <br> No requiere configuración de autorización <br> Endpoints <br> - Producción https://apis.pgf.cl <br> - Desarrollo https://apis-dev.pgf.cl
    * @param {Object} opts Optional parameters
-   * @param {module:model/InlineObject} opts.inlineObject 
+   * @param {module:model/LoginBody} opts.loginBody 
    * @param {module:api/AuthApi~usersLoginPostCallback} callback The callback function, accepting three arguments: error, data, response
    * data is of type: {@link module:model/LoginResponse}
    */
@@ -65,7 +65,7 @@ var AuthApi = /*#__PURE__*/function () {
     key: "usersLoginPost",
     value: function usersLoginPost(opts, callback) {
       opts = opts || {};
-      var postBody = opts['inlineObject'];
+      var postBody = opts['loginBody'];
       var pathParams = {};
       var queryParams = {};
       var headerParams = {};
