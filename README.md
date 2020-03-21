@@ -7,7 +7,7 @@
 
 <div align="center">
 
-[![Status](https://img.shields.io/badge/status-active-success.svg)](https://github.com/PSTPAGOFACIL/https://github.com/PSTPAGOFACIL/sdk-apis-javascript/)
+[![Status](https://img.shields.io/badge/status-active-success.svg)](https://github.com/PSTPAGOFACIL/sdk-apis-javascript/)
 [![GitHub Issues](https://img.shields.io/github/issues/PSTPAGOFACIL/sdk-apis-javascript.svg)](https://github.com/PSTPAGOFACIL/sdk-apis-javascript/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/PSTPAGOFACIL/sdk-apis-javascript.svg)](https://github.com/PSTPAGOFACIL/sdk-apis-javascript/pulls)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
