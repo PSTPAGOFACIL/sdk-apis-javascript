@@ -1,11 +1,11 @@
 {
-  "name": "api_pago_facil",
+  "name": "@pagofacil/api_pago_facil",
   "version": "2.1.0",
   "description": "Javascript SDK Pago Fácil APIs",
-  "license": "Unlicense",
+  "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
-    "build": "./node_modules/.bin/babel src -d dist",
+    "build": "babel src -d dist",
     "prepack": "npm run build",
     "test": "mocha --require @babel/register --recursive"
   },
@@ -42,5 +42,21 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PSTPAGOFACIL/sdk-apis-javascript.git"
+  },
+  "keywords": [
+    "pagofacil"
+  ],
+  "author": "Cristian Tala",
+  "bugs": {
+    "url": "https://github.com/PSTPAGOFACIL/sdk-apis-javascript/issues"
+  },
+  "homepage": "https://github.com/PSTPAGOFACIL/sdk-apis-javascript#readme"
 }
