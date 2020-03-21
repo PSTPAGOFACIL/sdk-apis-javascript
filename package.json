@@ -1,6 +1,6 @@
 {
   "name": "@pagofacil/api_pago_facil",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Javascript SDK Pago Fácil APIs",
   "license": "MIT",
   "main": "dist/index.js",
