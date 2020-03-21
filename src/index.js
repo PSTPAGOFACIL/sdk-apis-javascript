@@ -21,7 +21,6 @@ import InlineObject from './model/InlineObject';
 import InlineObject1 from './model/InlineObject1';
 import InlineObject2 from './model/InlineObject2';
 import InlineObject3 from './model/InlineObject3';
-import InlineObject4 from './model/InlineObject4';
 import InlineResponse200 from './model/InlineResponse200';
 import InlineResponse2001 from './model/InlineResponse2001';
 import InlineResponse2001Data from './model/InlineResponse2001Data';
@@ -54,6 +53,7 @@ import InlineResponse403 from './model/InlineResponse403';
 import InlineResponse404 from './model/InlineResponse404';
 import InlineResponse409 from './model/InlineResponse409';
 import InlineResponse500 from './model/InlineResponse500';
+import LoginBody from './model/LoginBody';
 import LoginResponse from './model/LoginResponse';
 import NullificationStatus from './model/NullificationStatus';
 import NullificationType from './model/NullificationType';
@@ -154,12 +154,6 @@ export {
      * @property {module:model/InlineObject3}
      */
     InlineObject3,
-
-    /**
-     * The InlineObject4 model constructor.
-     * @property {module:model/InlineObject4}
-     */
-    InlineObject4,
 
     /**
      * The InlineResponse200 model constructor.
@@ -352,6 +346,12 @@ export {
      * @property {module:model/InlineResponse500}
      */
     InlineResponse500,
+
+    /**
+     * The LoginBody model constructor.
+     * @property {module:model/LoginBody}
+     */
+    LoginBody,
 
     /**
      * The LoginResponse model constructor.

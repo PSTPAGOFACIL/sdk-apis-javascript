@@ -7,9 +7,9 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _InlineObject = _interopRequireDefault(require("../model/InlineObject1"));
+var _InlineObject = _interopRequireDefault(require("../model/InlineObject"));
 
-var _InlineObject2 = _interopRequireDefault(require("../model/InlineObject2"));
+var _InlineObject2 = _interopRequireDefault(require("../model/InlineObject1"));
 
 var _InlineResponse = _interopRequireDefault(require("../model/InlineResponse2002"));
 
@@ -141,7 +141,7 @@ var TrxsApi = /*#__PURE__*/function () {
      * Envía una transacción a anular
      * @param {Number} idTrx 
      * @param {Object} opts Optional parameters
-     * @param {module:model/InlineObject2} opts.inlineObject2 
+     * @param {module:model/InlineObject1} opts.inlineObject1 
      * @param {module:api/TrxsApi~trxsIdTrxNullificationPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse2004}
      */
@@ -150,7 +150,7 @@ var TrxsApi = /*#__PURE__*/function () {
     key: "trxsIdTrxNullificationPost",
     value: function trxsIdTrxNullificationPost(idTrx, opts, callback) {
       opts = opts || {};
-      var postBody = opts['inlineObject2']; // verify the required parameter 'idTrx' is set
+      var postBody = opts['inlineObject1']; // verify the required parameter 'idTrx' is set
 
       if (idTrx === undefined || idTrx === null) {
         throw new Error("Missing the required parameter 'idTrx' when calling trxsIdTrxNullificationPost");
@@ -223,7 +223,7 @@ var TrxsApi = /*#__PURE__*/function () {
     /**
      * Crea una transaccion en estado pendiente. <br> La respuesta tiene distintos métodos y URLs para pago
      * @param {Object} opts Optional parameters
-     * @param {module:model/InlineObject1} opts.inlineObject1 
+     * @param {module:model/InlineObject} opts.inlineObject 
      * @param {module:api/TrxsApi~trxsPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse2002}
      */
@@ -232,7 +232,7 @@ var TrxsApi = /*#__PURE__*/function () {
     key: "trxsPost",
     value: function trxsPost(opts, callback) {
       opts = opts || {};
-      var postBody = opts['inlineObject1'];
+      var postBody = opts['inlineObject'];
       var pathParams = {};
       var queryParams = {};
       var headerParams = {};

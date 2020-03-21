@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
+import InlineObject from '../model/InlineObject';
 import InlineObject1 from '../model/InlineObject1';
-import InlineObject2 from '../model/InlineObject2';
 import InlineResponse2002 from '../model/InlineResponse2002';
 import InlineResponse2003 from '../model/InlineResponse2003';
 import InlineResponse2004 from '../model/InlineResponse2004';
@@ -141,13 +141,13 @@ export default class TrxsApi {
      * Envía una transacción a anular
      * @param {Number} idTrx 
      * @param {Object} opts Optional parameters
-     * @param {module:model/InlineObject2} opts.inlineObject2 
+     * @param {module:model/InlineObject1} opts.inlineObject1 
      * @param {module:api/TrxsApi~trxsIdTrxNullificationPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse2004}
      */
     trxsIdTrxNullificationPost(idTrx, opts, callback) {
       opts = opts || {};
-      let postBody = opts['inlineObject2'];
+      let postBody = opts['inlineObject1'];
       // verify the required parameter 'idTrx' is set
       if (idTrx === undefined || idTrx === null) {
         throw new Error("Missing the required parameter 'idTrx' when calling trxsIdTrxNullificationPost");
@@ -233,13 +233,13 @@ export default class TrxsApi {
     /**
      * Crea una transaccion en estado pendiente. <br> La respuesta tiene distintos métodos y URLs para pago
      * @param {Object} opts Optional parameters
-     * @param {module:model/InlineObject1} opts.inlineObject1 
+     * @param {module:model/InlineObject} opts.inlineObject 
      * @param {module:api/TrxsApi~trxsPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse2002}
      */
     trxsPost(opts, callback) {
       opts = opts || {};
-      let postBody = opts['inlineObject1'];
+      let postBody = opts['inlineObject'];
 
       let pathParams = {
       };

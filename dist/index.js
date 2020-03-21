@@ -57,12 +57,6 @@ Object.defineProperty(exports, "InlineObject3", {
     return _InlineObject4["default"];
   }
 });
-Object.defineProperty(exports, "InlineObject4", {
-  enumerable: true,
-  get: function get() {
-    return _InlineObject5["default"];
-  }
-});
 Object.defineProperty(exports, "InlineResponse200", {
   enumerable: true,
   get: function get() {
@@ -255,6 +249,12 @@ Object.defineProperty(exports, "InlineResponse500", {
     return _InlineResponse19["default"];
   }
 });
+Object.defineProperty(exports, "LoginBody", {
+  enumerable: true,
+  get: function get() {
+    return _LoginBody["default"];
+  }
+});
 Object.defineProperty(exports, "LoginResponse", {
   enumerable: true,
   get: function get() {
@@ -352,8 +352,6 @@ var _InlineObject3 = _interopRequireDefault(require("./model/InlineObject2"));
 
 var _InlineObject4 = _interopRequireDefault(require("./model/InlineObject3"));
 
-var _InlineObject5 = _interopRequireDefault(require("./model/InlineObject4"));
-
 var _InlineResponse = _interopRequireDefault(require("./model/InlineResponse200"));
 
 var _InlineResponse2 = _interopRequireDefault(require("./model/InlineResponse2001"));
@@ -417,6 +415,8 @@ var _InlineResponse17 = _interopRequireDefault(require("./model/InlineResponse40
 var _InlineResponse18 = _interopRequireDefault(require("./model/InlineResponse409"));
 
 var _InlineResponse19 = _interopRequireDefault(require("./model/InlineResponse500"));
+
+var _LoginBody = _interopRequireDefault(require("./model/LoginBody"));
 
 var _LoginResponse = _interopRequireDefault(require("./model/LoginResponse"));
 

@@ -12,9 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import BillingDetails from './BillingDetails';
-import Document from './Document';
-import Shippment from './Shippment';
+import NullificationType from './NullificationType';
 
 /**
  * The InlineObject1 model module.
@@ -25,21 +23,12 @@ class InlineObject1 {
     /**
      * Constructs a new <code>InlineObject1</code>.
      * @alias module:model/InlineObject1
-     * @param xAccountId {String} Corresponde al <u>Token Service</u> relacionado al servicio con el que deseas generar el cobro.
-     * @param xAmount {Number} Monto de la transacción. Admite decimales si la divisa utilizada los utiliza.
-     * @param xCurrency {String} Codigo de 3 caracteres para paises. <br><br> Info:<a href='https://en.wikipedia.org/wiki/ISO_4217#Active_codes' target=_blank>ISO_4217</a>
-     * @param xReference {String} \\\"Tú\\\" número de orden. Este número debería ser único por servicio para no tener problema de duplicidad de pagos.
-     * @param xCustomerEmail {String} Correo en dónde se enviará la confirmación de pago al cliente.
-     * @param xUrlComplete {String} Dirección en dónde se redireccionará al momento de completar la transacción. Se enviará un POST a esta URL con los mismos datos del callback explicado en la sección response.
-     * @param xUrlCancel {String} Dirección en dónde se redireccionará en caso de cancelación. Se recomienda usar la dirección del carrito de compras.
-     * @param xUrlCallback {String} Dirección en donde se avisará de los cambios en la transacción de manera asincrónica a través de un método POST.
-     * @param xSignature {String} Mensaje Firmado. Para más información sobre la creación de la firma revisa https://apidocs.pagofacil.cl/proceso-de-firmado
-     * @param xShopCountry {String} Codigo de 2 caracteres para paises. <br><br> Info:<a href='https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes'>ISO 3166-1 Alpha2-code</a>
-     * @param xSessionId {String} Identificador único de la sesión del usuario que realiza el pago. Se agrega como capa de seguridad para validar la transacción. Max. 61 caracteres.
+     * @param amount {Number} Monto de la transacción
+     * @param type {module:model/NullificationType} 
      */
-    constructor(xAccountId, xAmount, xCurrency, xReference, xCustomerEmail, xUrlComplete, xUrlCancel, xUrlCallback, xSignature, xShopCountry, xSessionId) { 
+    constructor(amount, type) { 
         
-        InlineObject1.initialize(this, xAccountId, xAmount, xCurrency, xReference, xCustomerEmail, xUrlComplete, xUrlCancel, xUrlCallback, xSignature, xShopCountry, xSessionId);
+        InlineObject1.initialize(this, amount, type);
     }
 
     /**
@@ -47,18 +36,9 @@ class InlineObject1 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, xAccountId, xAmount, xCurrency, xReference, xCustomerEmail, xUrlComplete, xUrlCancel, xUrlCallback, xSignature, xShopCountry, xSessionId) { 
-        obj['x_account_id'] = xAccountId;
-        obj['x_amount'] = xAmount;
-        obj['x_currency'] = xCurrency;
-        obj['x_reference'] = xReference;
-        obj['x_customer_email'] = xCustomerEmail;
-        obj['x_url_complete'] = xUrlComplete;
-        obj['x_url_cancel'] = xUrlCancel;
-        obj['x_url_callback'] = xUrlCallback;
-        obj['x_signature'] = xSignature;
-        obj['x_shop_country'] = xShopCountry;
-        obj['x_session_id'] = xSessionId;
+    static initialize(obj, amount, type) { 
+        obj['amount'] = amount;
+        obj['type'] = type;
     }
 
     /**
@@ -72,50 +52,14 @@ class InlineObject1 {
         if (data) {
             obj = obj || new InlineObject1();
 
-            if (data.hasOwnProperty('x_account_id')) {
-                obj['x_account_id'] = ApiClient.convertToType(data['x_account_id'], 'String');
+            if (data.hasOwnProperty('amount')) {
+                obj['amount'] = ApiClient.convertToType(data['amount'], 'Number');
             }
-            if (data.hasOwnProperty('x_amount')) {
-                obj['x_amount'] = ApiClient.convertToType(data['x_amount'], 'Number');
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = NullificationType.constructFromObject(data['type']);
             }
-            if (data.hasOwnProperty('x_currency')) {
-                obj['x_currency'] = ApiClient.convertToType(data['x_currency'], 'String');
-            }
-            if (data.hasOwnProperty('x_reference')) {
-                obj['x_reference'] = ApiClient.convertToType(data['x_reference'], 'String');
-            }
-            if (data.hasOwnProperty('x_customer_email')) {
-                obj['x_customer_email'] = ApiClient.convertToType(data['x_customer_email'], 'String');
-            }
-            if (data.hasOwnProperty('x_url_complete')) {
-                obj['x_url_complete'] = ApiClient.convertToType(data['x_url_complete'], 'String');
-            }
-            if (data.hasOwnProperty('x_url_cancel')) {
-                obj['x_url_cancel'] = ApiClient.convertToType(data['x_url_cancel'], 'String');
-            }
-            if (data.hasOwnProperty('x_url_callback')) {
-                obj['x_url_callback'] = ApiClient.convertToType(data['x_url_callback'], 'String');
-            }
-            if (data.hasOwnProperty('x_signature')) {
-                obj['x_signature'] = ApiClient.convertToType(data['x_signature'], 'String');
-            }
-            if (data.hasOwnProperty('x_shop_country')) {
-                obj['x_shop_country'] = ApiClient.convertToType(data['x_shop_country'], 'String');
-            }
-            if (data.hasOwnProperty('x_session_id')) {
-                obj['x_session_id'] = ApiClient.convertToType(data['x_session_id'], 'String');
-            }
-            if (data.hasOwnProperty('x_products')) {
-                obj['x_products'] = ApiClient.convertToType(data['x_products'], [Object]);
-            }
-            if (data.hasOwnProperty('x_billing_details')) {
-                obj['x_billing_details'] = BillingDetails.constructFromObject(data['x_billing_details']);
-            }
-            if (data.hasOwnProperty('x_shippment')) {
-                obj['x_shippment'] = Shippment.constructFromObject(data['x_shippment']);
-            }
-            if (data.hasOwnProperty('x_document')) {
-                obj['x_document'] = Document.constructFromObject(data['x_document']);
+            if (data.hasOwnProperty('nullifyTbk')) {
+                obj['nullifyTbk'] = ApiClient.convertToType(data['nullifyTbk'], 'Boolean');
             }
         }
         return obj;
@@ -125,91 +69,21 @@ class InlineObject1 {
 }
 
 /**
- * Corresponde al <u>Token Service</u> relacionado al servicio con el que deseas generar el cobro.
- * @member {String} x_account_id
+ * Monto de la transacción
+ * @member {Number} amount
  */
-InlineObject1.prototype['x_account_id'] = undefined;
+InlineObject1.prototype['amount'] = undefined;
 
 /**
- * Monto de la transacción. Admite decimales si la divisa utilizada los utiliza.
- * @member {Number} x_amount
+ * @member {module:model/NullificationType} type
  */
-InlineObject1.prototype['x_amount'] = undefined;
+InlineObject1.prototype['type'] = undefined;
 
 /**
- * Codigo de 3 caracteres para paises. <br><br> Info:<a href='https://en.wikipedia.org/wiki/ISO_4217#Active_codes' target=_blank>ISO_4217</a>
- * @member {String} x_currency
+ * Identifica si se desea anular la trasacción en transbank
+ * @member {Boolean} nullifyTbk
  */
-InlineObject1.prototype['x_currency'] = undefined;
-
-/**
- * \\\"Tú\\\" número de orden. Este número debería ser único por servicio para no tener problema de duplicidad de pagos.
- * @member {String} x_reference
- */
-InlineObject1.prototype['x_reference'] = undefined;
-
-/**
- * Correo en dónde se enviará la confirmación de pago al cliente.
- * @member {String} x_customer_email
- */
-InlineObject1.prototype['x_customer_email'] = undefined;
-
-/**
- * Dirección en dónde se redireccionará al momento de completar la transacción. Se enviará un POST a esta URL con los mismos datos del callback explicado en la sección response.
- * @member {String} x_url_complete
- */
-InlineObject1.prototype['x_url_complete'] = undefined;
-
-/**
- * Dirección en dónde se redireccionará en caso de cancelación. Se recomienda usar la dirección del carrito de compras.
- * @member {String} x_url_cancel
- */
-InlineObject1.prototype['x_url_cancel'] = undefined;
-
-/**
- * Dirección en donde se avisará de los cambios en la transacción de manera asincrónica a través de un método POST.
- * @member {String} x_url_callback
- */
-InlineObject1.prototype['x_url_callback'] = undefined;
-
-/**
- * Mensaje Firmado. Para más información sobre la creación de la firma revisa https://apidocs.pagofacil.cl/proceso-de-firmado
- * @member {String} x_signature
- */
-InlineObject1.prototype['x_signature'] = undefined;
-
-/**
- * Codigo de 2 caracteres para paises. <br><br> Info:<a href='https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes'>ISO 3166-1 Alpha2-code</a>
- * @member {String} x_shop_country
- */
-InlineObject1.prototype['x_shop_country'] = undefined;
-
-/**
- * Identificador único de la sesión del usuario que realiza el pago. Se agrega como capa de seguridad para validar la transacción. Max. 61 caracteres.
- * @member {String} x_session_id
- */
-InlineObject1.prototype['x_session_id'] = undefined;
-
-/**
- * Productos asociados a la transacción
- * @member {Array.<Object>} x_products
- */
-InlineObject1.prototype['x_products'] = undefined;
-
-/**
- * @member {module:model/BillingDetails} x_billing_details
- */
-InlineObject1.prototype['x_billing_details'] = undefined;
-
-/**
- * @member {module:model/Shippment} x_shippment
- */
-InlineObject1.prototype['x_shippment'] = undefined;
-
-/**
- * @member {module:model/Document} x_document
- */
-InlineObject1.prototype['x_document'] = undefined;
+InlineObject1.prototype['nullifyTbk'] = undefined;
 
 
 

@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import NullificationType from './NullificationType';
 
 /**
  * The InlineObject2 model module.
@@ -23,12 +22,13 @@ class InlineObject2 {
     /**
      * Constructs a new <code>InlineObject2</code>.
      * @alias module:model/InlineObject2
-     * @param amount {Number} Monto de la transacción
-     * @param type {module:model/NullificationType} 
+     * @param url {String} La url que recibirá un POST para notificaciones
+     * @param method {module:model/InlineObject2.MethodEnum} Método HTTP a ser usado durante el callback
+     * @param webhook {module:model/InlineObject2.WebhookEnum} Tipo de webhook
      */
-    constructor(amount, type) { 
+    constructor(url, method, webhook) { 
         
-        InlineObject2.initialize(this, amount, type);
+        InlineObject2.initialize(this, url, method, webhook);
     }
 
     /**
@@ -36,9 +36,10 @@ class InlineObject2 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, amount, type) { 
-        obj['amount'] = amount;
-        obj['type'] = type;
+    static initialize(obj, url, method, webhook) { 
+        obj['url'] = url;
+        obj['method'] = method;
+        obj['webhook'] = webhook;
     }
 
     /**
@@ -52,14 +53,14 @@ class InlineObject2 {
         if (data) {
             obj = obj || new InlineObject2();
 
-            if (data.hasOwnProperty('amount')) {
-                obj['amount'] = ApiClient.convertToType(data['amount'], 'Number');
+            if (data.hasOwnProperty('url')) {
+                obj['url'] = ApiClient.convertToType(data['url'], 'String');
             }
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = NullificationType.constructFromObject(data['type']);
+            if (data.hasOwnProperty('method')) {
+                obj['method'] = ApiClient.convertToType(data['method'], 'String');
             }
-            if (data.hasOwnProperty('nullifyTbk')) {
-                obj['nullifyTbk'] = ApiClient.convertToType(data['nullifyTbk'], 'Boolean');
+            if (data.hasOwnProperty('webhook')) {
+                obj['webhook'] = ApiClient.convertToType(data['webhook'], 'String');
             }
         }
         return obj;
@@ -69,24 +70,61 @@ class InlineObject2 {
 }
 
 /**
- * Monto de la transacción
- * @member {Number} amount
+ * La url que recibirá un POST para notificaciones
+ * @member {String} url
  */
-InlineObject2.prototype['amount'] = undefined;
+InlineObject2.prototype['url'] = undefined;
 
 /**
- * @member {module:model/NullificationType} type
+ * Método HTTP a ser usado durante el callback
+ * @member {module:model/InlineObject2.MethodEnum} method
  */
-InlineObject2.prototype['type'] = undefined;
+InlineObject2.prototype['method'] = undefined;
 
 /**
- * Identifica si se desea anular la trasacción en transbank
- * @member {Boolean} nullifyTbk
+ * Tipo de webhook
+ * @member {module:model/InlineObject2.WebhookEnum} webhook
  */
-InlineObject2.prototype['nullifyTbk'] = undefined;
+InlineObject2.prototype['webhook'] = undefined;
 
 
 
+
+
+/**
+ * Allowed values for the <code>method</code> property.
+ * @enum {String}
+ * @readonly
+ */
+InlineObject2['MethodEnum'] = {
+
+    /**
+     * value: "POST"
+     * @const
+     */
+    "POST": "POST",
+
+    /**
+     * value: "GET"
+     * @const
+     */
+    "GET": "GET"
+};
+
+
+/**
+ * Allowed values for the <code>webhook</code> property.
+ * @enum {String}
+ * @readonly
+ */
+InlineObject2['WebhookEnum'] = {
+
+    /**
+     * value: "remittances"
+     * @const
+     */
+    "remittances": "remittances"
+};
 
 
 

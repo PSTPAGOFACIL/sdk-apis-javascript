@@ -26,12 +26,13 @@ var InlineObject3 = /*#__PURE__*/function () {
    * @alias module:model/InlineObject3
    * @param url {String} La url que recibirá un POST para notificaciones
    * @param method {module:model/InlineObject3.MethodEnum} Método HTTP a ser usado durante el callback
-   * @param webhook {module:model/InlineObject3.WebhookEnum} Tipo de webhook
+   * @param webhook {module:model/InlineObject3.WebhookEnum} Tipo de evento del webhook
+   * @param idUser {String} Id del usuario que quiere crear el webhook
    */
-  function InlineObject3(url, method, webhook) {
+  function InlineObject3(url, method, webhook, idUser) {
     _classCallCheck(this, InlineObject3);
 
-    InlineObject3.initialize(this, url, method, webhook);
+    InlineObject3.initialize(this, url, method, webhook, idUser);
   }
   /**
    * Initializes the fields of this object.
@@ -42,10 +43,11 @@ var InlineObject3 = /*#__PURE__*/function () {
 
   _createClass(InlineObject3, null, [{
     key: "initialize",
-    value: function initialize(obj, url, method, webhook) {
+    value: function initialize(obj, url, method, webhook, idUser) {
       obj['url'] = url;
       obj['method'] = method;
       obj['webhook'] = webhook;
+      obj['idUser'] = idUser;
     }
     /**
      * Constructs a <code>InlineObject3</code> from a plain JavaScript object, optionally creating a new instance.
@@ -72,6 +74,10 @@ var InlineObject3 = /*#__PURE__*/function () {
         if (data.hasOwnProperty('webhook')) {
           obj['webhook'] = _ApiClient["default"].convertToType(data['webhook'], 'String');
         }
+
+        if (data.hasOwnProperty('idUser')) {
+          obj['idUser'] = _ApiClient["default"].convertToType(data['idUser'], 'String');
+        }
       }
 
       return obj;
@@ -94,11 +100,17 @@ InlineObject3.prototype['url'] = undefined;
 
 InlineObject3.prototype['method'] = undefined;
 /**
- * Tipo de webhook
+ * Tipo de evento del webhook
  * @member {module:model/InlineObject3.WebhookEnum} webhook
  */
 
 InlineObject3.prototype['webhook'] = undefined;
+/**
+ * Id del usuario que quiere crear el webhook
+ * @member {String} idUser
+ */
+
+InlineObject3.prototype['idUser'] = undefined;
 /**
  * Allowed values for the <code>method</code> property.
  * @enum {String}

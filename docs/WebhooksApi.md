@@ -1,6 +1,6 @@
 # ApiPagoFacil.WebhooksApi
 
-All URIs are relative to *https://apis-dev.pgf.cl*
+All URIs are relative to *https://apis.pgf.cl*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -120,7 +120,7 @@ let apiInstance = new ApiPagoFacil.WebhooksApi();
 let idUser = 123; // String | ID del usuario a consultar
 let webhook = remittances; // String | Tipo de evento del webhook
 let opts = {
-  'inlineObject4': new ApiPagoFacil.InlineObject4() // InlineObject4 | 
+  'inlineObject3': new ApiPagoFacil.InlineObject3() // InlineObject3 | 
 };
 apiInstance.webhooksIdUserWebhookPut(idUser, webhook, opts, (error, data, response) => {
   if (error) {
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **idUser** | **String**| ID del usuario a consultar | 
  **webhook** | **String**| Tipo de evento del webhook | 
- **inlineObject4** | [**InlineObject4**](InlineObject4.md)|  | [optional] 
+ **inlineObject3** | [**InlineObject3**](InlineObject3.md)|  | [optional] 
 
 ### Return type
 
@@ -169,7 +169,7 @@ import ApiPagoFacil from 'api_pago_facil';
 
 let apiInstance = new ApiPagoFacil.WebhooksApi();
 let opts = {
-  'inlineObject3': new ApiPagoFacil.InlineObject3() // InlineObject3 | 
+  'inlineObject2': new ApiPagoFacil.InlineObject2() // InlineObject2 | 
 };
 apiInstance.webhooksPost(opts, (error, data, response) => {
   if (error) {
@@ -185,7 +185,7 @@ apiInstance.webhooksPost(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inlineObject3** | [**InlineObject3**](InlineObject3.md)|  | [optional] 
+ **inlineObject2** | [**InlineObject2**](InlineObject2.md)|  | [optional] 
 
 ### Return type
 

@@ -1,6 +1,6 @@
 # ApiPagoFacil.TrxsApi
 
-All URIs are relative to *https://apis-dev.pgf.cl*
+All URIs are relative to *https://apis.pgf.cl*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -130,7 +130,7 @@ JWTToken.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new ApiPagoFacil.TrxsApi();
 let idTrx = 3.4; // Number | 
 let opts = {
-  'inlineObject2': new ApiPagoFacil.InlineObject2() // InlineObject2 | 
+  'inlineObject1': new ApiPagoFacil.InlineObject1() // InlineObject1 | 
 };
 apiInstance.trxsIdTrxNullificationPost(idTrx, opts, (error, data, response) => {
   if (error) {
@@ -147,7 +147,7 @@ apiInstance.trxsIdTrxNullificationPost(idTrx, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **idTrx** | **Number**|  | 
- **inlineObject2** | [**InlineObject2**](InlineObject2.md)|  | [optional] 
+ **inlineObject1** | [**InlineObject1**](InlineObject1.md)|  | [optional] 
 
 ### Return type
 
@@ -229,7 +229,7 @@ import ApiPagoFacil from 'api_pago_facil';
 
 let apiInstance = new ApiPagoFacil.TrxsApi();
 let opts = {
-  'inlineObject1': new ApiPagoFacil.InlineObject1() // InlineObject1 | 
+  'inlineObject': new ApiPagoFacil.InlineObject() // InlineObject | 
 };
 apiInstance.trxsPost(opts, (error, data, response) => {
   if (error) {
@@ -245,7 +245,7 @@ apiInstance.trxsPost(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inlineObject1** | [**InlineObject1**](InlineObject1.md)|  | [optional] 
+ **inlineObject** | [**InlineObject**](InlineObject.md)|  | [optional] 
 
 ### Return type
 

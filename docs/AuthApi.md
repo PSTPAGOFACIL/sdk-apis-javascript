@@ -1,6 +1,6 @@
 # ApiPagoFacil.AuthApi
 
-All URIs are relative to *https://apis-dev.pgf.cl*
+All URIs are relative to *https://apis.pgf.cl*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -23,7 +23,7 @@ import ApiPagoFacil from 'api_pago_facil';
 
 let apiInstance = new ApiPagoFacil.AuthApi();
 let opts = {
-  'inlineObject': new ApiPagoFacil.InlineObject() // InlineObject | 
+  'loginBody': new ApiPagoFacil.LoginBody() // LoginBody | 
 };
 apiInstance.usersLoginPost(opts, (error, data, response) => {
   if (error) {
@@ -39,7 +39,7 @@ apiInstance.usersLoginPost(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inlineObject** | [**InlineObject**](InlineObject.md)|  | [optional] 
+ **loginBody** | [**LoginBody**](LoginBody.md)|  | [optional] 
 
 ### Return type
 

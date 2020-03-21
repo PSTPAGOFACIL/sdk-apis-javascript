@@ -7,9 +7,9 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _InlineObject = _interopRequireDefault(require("../model/InlineObject3"));
+var _InlineObject = _interopRequireDefault(require("../model/InlineObject2"));
 
-var _InlineObject2 = _interopRequireDefault(require("../model/InlineObject4"));
+var _InlineObject2 = _interopRequireDefault(require("../model/InlineObject3"));
 
 var _InlineResponse = _interopRequireDefault(require("../model/InlineResponse2007"));
 
@@ -140,7 +140,7 @@ var WebhooksApi = /*#__PURE__*/function () {
      * @param {String} idUser ID del usuario a consultar
      * @param {String} webhook Tipo de evento del webhook
      * @param {Object} opts Optional parameters
-     * @param {module:model/InlineObject4} opts.inlineObject4 
+     * @param {module:model/InlineObject3} opts.inlineObject3 
      * @param {module:api/WebhooksApi~webhooksIdUserWebhookPutCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse201}
      */
@@ -149,7 +149,7 @@ var WebhooksApi = /*#__PURE__*/function () {
     key: "webhooksIdUserWebhookPut",
     value: function webhooksIdUserWebhookPut(idUser, webhook, opts, callback) {
       opts = opts || {};
-      var postBody = opts['inlineObject4']; // verify the required parameter 'idUser' is set
+      var postBody = opts['inlineObject3']; // verify the required parameter 'idUser' is set
 
       if (idUser === undefined || idUser === null) {
         throw new Error("Missing the required parameter 'idUser' when calling webhooksIdUserWebhookPut");
@@ -184,7 +184,7 @@ var WebhooksApi = /*#__PURE__*/function () {
     /**
      * Crea un webhook para tus servicios. <br> Se enviará un POST a esta URL cuando se realicen eventos como abonos a tu cuenta.
      * @param {Object} opts Optional parameters
-     * @param {module:model/InlineObject3} opts.inlineObject3 
+     * @param {module:model/InlineObject2} opts.inlineObject2 
      * @param {module:api/WebhooksApi~webhooksPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse201}
      */
@@ -193,7 +193,7 @@ var WebhooksApi = /*#__PURE__*/function () {
     key: "webhooksPost",
     value: function webhooksPost(opts, callback) {
       opts = opts || {};
-      var postBody = opts['inlineObject3'];
+      var postBody = opts['inlineObject2'];
       var pathParams = {};
       var queryParams = {};
       var headerParams = {};

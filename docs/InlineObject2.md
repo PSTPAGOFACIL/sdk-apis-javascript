@@ -4,8 +4,28 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**amount** | **Number** | Monto de la transacción | 
-**type** | [**NullificationType**](NullificationType.md) |  | 
-**nullifyTbk** | **Boolean** | Identifica si se desea anular la trasacción en transbank | [optional] 
+**url** | **String** | La url que recibirá un POST para notificaciones | 
+**method** | **String** | Método HTTP a ser usado durante el callback | 
+**webhook** | **String** | Tipo de webhook | 
+
+
+
+## Enum: MethodEnum
+
+
+* `POST` (value: `"POST"`)
+
+* `GET` (value: `"GET"`)
+
+
+
+
+
+## Enum: WebhookEnum
+
+
+* `remittances` (value: `"remittances"`)
+
+
 
 

@@ -1,6 +1,6 @@
 # ApiPagoFacil.UsersApi
 
-All URIs are relative to *https://apis-dev.pgf.cl*
+All URIs are relative to *https://apis.pgf.cl*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

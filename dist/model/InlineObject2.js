@@ -7,8 +7,6 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _NullificationType = _interopRequireDefault(require("./NullificationType"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -26,13 +24,14 @@ var InlineObject2 = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>InlineObject2</code>.
    * @alias module:model/InlineObject2
-   * @param amount {Number} Monto de la transacción
-   * @param type {module:model/NullificationType} 
+   * @param url {String} La url que recibirá un POST para notificaciones
+   * @param method {module:model/InlineObject2.MethodEnum} Método HTTP a ser usado durante el callback
+   * @param webhook {module:model/InlineObject2.WebhookEnum} Tipo de webhook
    */
-  function InlineObject2(amount, type) {
+  function InlineObject2(url, method, webhook) {
     _classCallCheck(this, InlineObject2);
 
-    InlineObject2.initialize(this, amount, type);
+    InlineObject2.initialize(this, url, method, webhook);
   }
   /**
    * Initializes the fields of this object.
@@ -43,9 +42,10 @@ var InlineObject2 = /*#__PURE__*/function () {
 
   _createClass(InlineObject2, null, [{
     key: "initialize",
-    value: function initialize(obj, amount, type) {
-      obj['amount'] = amount;
-      obj['type'] = type;
+    value: function initialize(obj, url, method, webhook) {
+      obj['url'] = url;
+      obj['method'] = method;
+      obj['webhook'] = webhook;
     }
     /**
      * Constructs a <code>InlineObject2</code> from a plain JavaScript object, optionally creating a new instance.
@@ -61,16 +61,16 @@ var InlineObject2 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new InlineObject2();
 
-        if (data.hasOwnProperty('amount')) {
-          obj['amount'] = _ApiClient["default"].convertToType(data['amount'], 'Number');
+        if (data.hasOwnProperty('url')) {
+          obj['url'] = _ApiClient["default"].convertToType(data['url'], 'String');
         }
 
-        if (data.hasOwnProperty('type')) {
-          obj['type'] = _NullificationType["default"].constructFromObject(data['type']);
+        if (data.hasOwnProperty('method')) {
+          obj['method'] = _ApiClient["default"].convertToType(data['method'], 'String');
         }
 
-        if (data.hasOwnProperty('nullifyTbk')) {
-          obj['nullifyTbk'] = _ApiClient["default"].convertToType(data['nullifyTbk'], 'Boolean');
+        if (data.hasOwnProperty('webhook')) {
+          obj['webhook'] = _ApiClient["default"].convertToType(data['webhook'], 'String');
         }
       }
 
@@ -81,22 +81,55 @@ var InlineObject2 = /*#__PURE__*/function () {
   return InlineObject2;
 }();
 /**
- * Monto de la transacción
- * @member {Number} amount
+ * La url que recibirá un POST para notificaciones
+ * @member {String} url
  */
 
 
-InlineObject2.prototype['amount'] = undefined;
+InlineObject2.prototype['url'] = undefined;
 /**
- * @member {module:model/NullificationType} type
+ * Método HTTP a ser usado durante el callback
+ * @member {module:model/InlineObject2.MethodEnum} method
  */
 
-InlineObject2.prototype['type'] = undefined;
+InlineObject2.prototype['method'] = undefined;
 /**
- * Identifica si se desea anular la trasacción en transbank
- * @member {Boolean} nullifyTbk
+ * Tipo de webhook
+ * @member {module:model/InlineObject2.WebhookEnum} webhook
  */
 
-InlineObject2.prototype['nullifyTbk'] = undefined;
+InlineObject2.prototype['webhook'] = undefined;
+/**
+ * Allowed values for the <code>method</code> property.
+ * @enum {String}
+ * @readonly
+ */
+
+InlineObject2['MethodEnum'] = {
+  /**
+   * value: "POST"
+   * @const
+   */
+  "POST": "POST",
+
+  /**
+   * value: "GET"
+   * @const
+   */
+  "GET": "GET"
+};
+/**
+ * Allowed values for the <code>webhook</code> property.
+ * @enum {String}
+ * @readonly
+ */
+
+InlineObject2['WebhookEnum'] = {
+  /**
+   * value: "remittances"
+   * @const
+   */
+  "remittances": "remittances"
+};
 var _default = InlineObject2;
 exports["default"] = _default;

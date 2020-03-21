@@ -38,9 +38,9 @@ var ApiClient = /*#__PURE__*/function () {
     /**
      * The base URL against which to resolve every API call's (relative) path.
      * @type {String}
-     * @default https://apis-dev.pgf.cl
+     * @default https://apis.pgf.cl
      */
-    this.basePath = 'https://apis-dev.pgf.cl'.replace(/\/+$/, '');
+    this.basePath = 'https://apis.pgf.cl'.replace(/\/+$/, '');
     /**
      * The authentication methods to be included for all API calls.
      * @type {Array.<String>}
@@ -541,14 +541,11 @@ var ApiClient = /*#__PURE__*/function () {
       */
     value: function hostSettings() {
       return [{
-        'url': "https://apis-dev.pgf.cl",
-        'description': "DEVELOPMENT"
-      }, {
         'url': "https://apis.pgf.cl",
         'description': "PRODUCTION"
       }, {
-        'url': "https://virtserver.swaggerhub.com/PagoFacilSpA/Api/2.0",
-        'description': "SwaggerHub API Auto Mocking"
+        'url': "https://apis-dev.pgf.cl",
+        'description': "DEVELOPMENT"
       }];
     }
   }, {

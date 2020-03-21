@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
+import InlineObject2 from '../model/InlineObject2';
 import InlineObject3 from '../model/InlineObject3';
-import InlineObject4 from '../model/InlineObject4';
 import InlineResponse2007 from '../model/InlineResponse2007';
 import InlineResponse201 from '../model/InlineResponse201';
 import InlineResponse400 from '../model/InlineResponse400';
@@ -143,13 +143,13 @@ export default class WebhooksApi {
      * @param {String} idUser ID del usuario a consultar
      * @param {String} webhook Tipo de evento del webhook
      * @param {Object} opts Optional parameters
-     * @param {module:model/InlineObject4} opts.inlineObject4 
+     * @param {module:model/InlineObject3} opts.inlineObject3 
      * @param {module:api/WebhooksApi~webhooksIdUserWebhookPutCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse201}
      */
     webhooksIdUserWebhookPut(idUser, webhook, opts, callback) {
       opts = opts || {};
-      let postBody = opts['inlineObject4'];
+      let postBody = opts['inlineObject3'];
       // verify the required parameter 'idUser' is set
       if (idUser === undefined || idUser === null) {
         throw new Error("Missing the required parameter 'idUser' when calling webhooksIdUserWebhookPut");
@@ -192,13 +192,13 @@ export default class WebhooksApi {
     /**
      * Crea un webhook para tus servicios. <br> Se enviará un POST a esta URL cuando se realicen eventos como abonos a tu cuenta.
      * @param {Object} opts Optional parameters
-     * @param {module:model/InlineObject3} opts.inlineObject3 
+     * @param {module:model/InlineObject2} opts.inlineObject2 
      * @param {module:api/WebhooksApi~webhooksPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse201}
      */
     webhooksPost(opts, callback) {
       opts = opts || {};
-      let postBody = opts['inlineObject3'];
+      let postBody = opts['inlineObject2'];
 
       let pathParams = {
       };

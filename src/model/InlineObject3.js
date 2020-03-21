@@ -24,11 +24,12 @@ class InlineObject3 {
      * @alias module:model/InlineObject3
      * @param url {String} La url que recibirá un POST para notificaciones
      * @param method {module:model/InlineObject3.MethodEnum} Método HTTP a ser usado durante el callback
-     * @param webhook {module:model/InlineObject3.WebhookEnum} Tipo de webhook
+     * @param webhook {module:model/InlineObject3.WebhookEnum} Tipo de evento del webhook
+     * @param idUser {String} Id del usuario que quiere crear el webhook
      */
-    constructor(url, method, webhook) { 
+    constructor(url, method, webhook, idUser) { 
         
-        InlineObject3.initialize(this, url, method, webhook);
+        InlineObject3.initialize(this, url, method, webhook, idUser);
     }
 
     /**
@@ -36,10 +37,11 @@ class InlineObject3 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, url, method, webhook) { 
+    static initialize(obj, url, method, webhook, idUser) { 
         obj['url'] = url;
         obj['method'] = method;
         obj['webhook'] = webhook;
+        obj['idUser'] = idUser;
     }
 
     /**
@@ -62,6 +64,9 @@ class InlineObject3 {
             if (data.hasOwnProperty('webhook')) {
                 obj['webhook'] = ApiClient.convertToType(data['webhook'], 'String');
             }
+            if (data.hasOwnProperty('idUser')) {
+                obj['idUser'] = ApiClient.convertToType(data['idUser'], 'String');
+            }
         }
         return obj;
     }
@@ -82,10 +87,16 @@ InlineObject3.prototype['url'] = undefined;
 InlineObject3.prototype['method'] = undefined;
 
 /**
- * Tipo de webhook
+ * Tipo de evento del webhook
  * @member {module:model/InlineObject3.WebhookEnum} webhook
  */
 InlineObject3.prototype['webhook'] = undefined;
+
+/**
+ * Id del usuario que quiere crear el webhook
+ * @member {String} idUser
+ */
+InlineObject3.prototype['idUser'] = undefined;
 
 
 
