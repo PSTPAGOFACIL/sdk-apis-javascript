@@ -72,6 +72,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property idUser (base name: "idUser")', function() {
+      // uncomment below and update the code to test the property idUser
+      //var instane = new ApiPagoFacil.InlineObject3();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

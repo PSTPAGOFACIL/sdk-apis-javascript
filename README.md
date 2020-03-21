@@ -1,4 +1,4 @@
-# Javascript SDK Pago Fácil APIs
+# api_pago_facil
 
 ApiPagoFacil - JavaScript client for api_pago_facil
 API de Pago Fácil
@@ -19,7 +19,7 @@ To publish the library as a [npm](https://www.npmjs.com/), please follow the pro
 Then install it via:
 
 ```shell
-npm install @pagofacil/api_pago_facil --save
+npm install api_pago_facil --save
 ```
 
 Finally, you need to build the module:
@@ -56,11 +56,11 @@ npm run build
 
 #### git
 
-If the library is hosted at a git repository, e.g.https://github.com/PSTPAGOFACIL/sdk-apis-javascript
+If the library is hosted at a git repository, e.g.https://github.com/GIT_USER_ID/GIT_REPO_ID
 then install it via:
 
 ```shell
-    npm install PSTPAGOFACIL/sdk-apis-javascript --save
+    npm install GIT_USER_ID/GIT_REPO_ID --save
 ```
 
 ### For browser
@@ -103,7 +103,7 @@ var ApiPagoFacil = require('api_pago_facil');
 
 var api = new ApiPagoFacil.AuthApi()
 var opts = {
-  'inlineObject': new ApiPagoFacil.InlineObject() // {InlineObject} 
+  'loginBody': new ApiPagoFacil.LoginBody() // {LoginBody} 
 };
 var callback = function(error, data, response) {
   if (error) {
@@ -118,7 +118,7 @@ api.usersLoginPost(opts, callback);
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://apis-dev.pgf.cl*
+All URIs are relative to *https://apis.pgf.cl*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -148,7 +148,6 @@ Class | Method | HTTP request | Description
  - [ApiPagoFacil.InlineObject1](docs/InlineObject1.md)
  - [ApiPagoFacil.InlineObject2](docs/InlineObject2.md)
  - [ApiPagoFacil.InlineObject3](docs/InlineObject3.md)
- - [ApiPagoFacil.InlineObject4](docs/InlineObject4.md)
  - [ApiPagoFacil.InlineResponse200](docs/InlineResponse200.md)
  - [ApiPagoFacil.InlineResponse2001](docs/InlineResponse2001.md)
  - [ApiPagoFacil.InlineResponse2001Data](docs/InlineResponse2001Data.md)
@@ -181,6 +180,7 @@ Class | Method | HTTP request | Description
  - [ApiPagoFacil.InlineResponse404](docs/InlineResponse404.md)
  - [ApiPagoFacil.InlineResponse409](docs/InlineResponse409.md)
  - [ApiPagoFacil.InlineResponse500](docs/InlineResponse500.md)
+ - [ApiPagoFacil.LoginBody](docs/LoginBody.md)
  - [ApiPagoFacil.LoginResponse](docs/LoginResponse.md)
  - [ApiPagoFacil.NullificationStatus](docs/NullificationStatus.md)
  - [ApiPagoFacil.NullificationType](docs/NullificationType.md)

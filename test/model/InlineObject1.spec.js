@@ -54,92 +54,20 @@
       //expect(instance).to.be.a(ApiPagoFacil.InlineObject1);
     });
 
-    it('should have the property xAccountId (base name: "x_account_id")', function() {
-      // uncomment below and update the code to test the property xAccountId
+    it('should have the property amount (base name: "amount")', function() {
+      // uncomment below and update the code to test the property amount
       //var instane = new ApiPagoFacil.InlineObject1();
       //expect(instance).to.be();
     });
 
-    it('should have the property xAmount (base name: "x_amount")', function() {
-      // uncomment below and update the code to test the property xAmount
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
       //var instane = new ApiPagoFacil.InlineObject1();
       //expect(instance).to.be();
     });
 
-    it('should have the property xCurrency (base name: "x_currency")', function() {
-      // uncomment below and update the code to test the property xCurrency
-      //var instane = new ApiPagoFacil.InlineObject1();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property xReference (base name: "x_reference")', function() {
-      // uncomment below and update the code to test the property xReference
-      //var instane = new ApiPagoFacil.InlineObject1();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property xCustomerEmail (base name: "x_customer_email")', function() {
-      // uncomment below and update the code to test the property xCustomerEmail
-      //var instane = new ApiPagoFacil.InlineObject1();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property xUrlComplete (base name: "x_url_complete")', function() {
-      // uncomment below and update the code to test the property xUrlComplete
-      //var instane = new ApiPagoFacil.InlineObject1();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property xUrlCancel (base name: "x_url_cancel")', function() {
-      // uncomment below and update the code to test the property xUrlCancel
-      //var instane = new ApiPagoFacil.InlineObject1();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property xUrlCallback (base name: "x_url_callback")', function() {
-      // uncomment below and update the code to test the property xUrlCallback
-      //var instane = new ApiPagoFacil.InlineObject1();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property xSignature (base name: "x_signature")', function() {
-      // uncomment below and update the code to test the property xSignature
-      //var instane = new ApiPagoFacil.InlineObject1();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property xShopCountry (base name: "x_shop_country")', function() {
-      // uncomment below and update the code to test the property xShopCountry
-      //var instane = new ApiPagoFacil.InlineObject1();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property xSessionId (base name: "x_session_id")', function() {
-      // uncomment below and update the code to test the property xSessionId
-      //var instane = new ApiPagoFacil.InlineObject1();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property xProducts (base name: "x_products")', function() {
-      // uncomment below and update the code to test the property xProducts
-      //var instane = new ApiPagoFacil.InlineObject1();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property xBillingDetails (base name: "x_billing_details")', function() {
-      // uncomment below and update the code to test the property xBillingDetails
-      //var instane = new ApiPagoFacil.InlineObject1();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property xShippment (base name: "x_shippment")', function() {
-      // uncomment below and update the code to test the property xShippment
-      //var instane = new ApiPagoFacil.InlineObject1();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property xDocument (base name: "x_document")', function() {
-      // uncomment below and update the code to test the property xDocument
+    it('should have the property nullifyTbk (base name: "nullifyTbk")', function() {
+      // uncomment below and update the code to test the property nullifyTbk
       //var instane = new ApiPagoFacil.InlineObject1();
       //expect(instance).to.be();
     });

@@ -54,20 +54,20 @@
       //expect(instance).to.be.a(ApiPagoFacil.InlineObject2);
     });
 
-    it('should have the property amount (base name: "amount")', function() {
-      // uncomment below and update the code to test the property amount
+    it('should have the property url (base name: "url")', function() {
+      // uncomment below and update the code to test the property url
       //var instane = new ApiPagoFacil.InlineObject2();
       //expect(instance).to.be();
     });
 
-    it('should have the property type (base name: "type")', function() {
-      // uncomment below and update the code to test the property type
+    it('should have the property method (base name: "method")', function() {
+      // uncomment below and update the code to test the property method
       //var instane = new ApiPagoFacil.InlineObject2();
       //expect(instance).to.be();
     });
 
-    it('should have the property nullifyTbk (base name: "nullifyTbk")', function() {
-      // uncomment below and update the code to test the property nullifyTbk
+    it('should have the property webhook (base name: "webhook")', function() {
+      // uncomment below and update the code to test the property webhook
       //var instane = new ApiPagoFacil.InlineObject2();
       //expect(instance).to.be();
     });
