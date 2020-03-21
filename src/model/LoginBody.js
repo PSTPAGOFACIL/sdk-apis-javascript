@@ -25,6 +25,7 @@ class LoginBody {
      * @alias module:model/LoginBody
      * @param username {String} Correo con el cual create tu cuenta
      * @param password {String} Tu clave en el portal.
+     * @param isDev {Boolean} Acceso a dev.
      */
     constructor(username, password) { 
         
