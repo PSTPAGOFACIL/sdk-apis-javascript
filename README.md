@@ -1,3 +1,19 @@
+<p align="center">
+  <a href="" rel="noopener">
+ <img height=200px src="assets/images/1-Logo_cuadrado.png" alt="Pago Fácil SpA Examples"></a>
+</p>
+
+<h3 align="center"><a href="https://github.com/PSTPAGOFACIL/sdk-apis-javascript" target = "_blank">@pagofacil/sdk-apis-javascript</a></h3>
+
+<div align="center">
+
+[![Status](https://img.shields.io/badge/status-active-success.svg)](https://github.com/PSTPAGOFACIL/https://github.com/PSTPAGOFACIL/sdk-apis-javascript/)
+[![GitHub Issues](https://img.shields.io/github/issues/PSTPAGOFACIL/sdk-apis-javascript.svg)](https://github.com/PSTPAGOFACIL/sdk-apis-javascript/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/PSTPAGOFACIL/sdk-apis-javascript.svg)](https://github.com/PSTPAGOFACIL/sdk-apis-javascript/pulls)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+</div>
+
+---
 # Javascript SDK for Pago Fácil API
 
 ApiPagoFacil - JavaScript client for api_pago_facil
